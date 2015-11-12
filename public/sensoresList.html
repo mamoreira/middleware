@@ -21,7 +21,7 @@
     <link href="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
 
     <!-- DataTables Responsive CSS -->
-    <link href="../bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+    <link href="../bower_components/datatables-responsive/css/responsive.dataTables.scss" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
@@ -35,7 +35,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="sensores.js"></script>
 </head>
 
 <body>
@@ -117,21 +118,14 @@
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
-                                            <th>Rendering engine</th>
-                                            <th>Browser</th>
-                                            <th>Platform(s)</th>
-                                            <th>Engine version</th>
-                                            <th>CSS grade</th>
+                                            <th>ID</th>
+                                            <th>Descripciion</th>
+                                            <th>Tipo Sensor</th>
+                                            <th>Puerto</th>
+                                            <th>Modo</th>
                                         </tr>
                                     </thead>
                                     <tbody id="listSensores">
-                                        <tr class="odd gradeA">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 7</td>
-                                            <td>Win XP SP2+</td>
-                                            <td class="center">7</td>
-                                            <td class="center">A</td>
-                                        </tr>
                                        
                                     </tbody>
                                 </table>

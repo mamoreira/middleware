@@ -63,6 +63,7 @@ app.use(express.static("../public"));
 io.on('connection', function (socket) {
     console.log("Cliente conectado con socket");
     socket.emit("sensores",sensores);
+    socket.emit("listSensores",sensores);
     setInterval(function enviar() {
         var arreglo=new Array();
         for (var k in sensores) {

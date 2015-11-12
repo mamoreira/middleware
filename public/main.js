@@ -1,6 +1,3 @@
-var PORT = 33333;
-var HOST = '192.168.7.1';
-
 var socket=io.connect("http://192.168.7.2:8081");
 socket.on("sensores",function(data){
         mostrarSensores(data);
