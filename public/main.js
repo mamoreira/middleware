@@ -8,6 +8,10 @@ socket.on("sensores",function(data){
             actualizarSensor(data1);
         });
 });
+socket.on("listSensores",function(data2) {
+    obtenerListSensores(data2);
+}
+);
 
 function mostrarSensores(data){
     var html="";
@@ -34,4 +38,20 @@ function actualizarSensor(data){
             document.getElementById("sensor"+data[i].id).innerHTML=html
         }
     }
+}
+
+function obtenerListSensores(data){
+    var html="";
+    for(var i in data){
+        html=html+`
+        <tr class="odd gradeA">
+            <td>Trident</td>
+            <td>Internet Explorer 7</td>
+            <td>Win XP SP2+</td>
+            <td class="center">7</td>
+            <td class="center">A</td>
+        </tr>
+       `;
+    }
+    document.getElementById("listSensores").innerHTML = html;
 }
