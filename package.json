@@ -1,0 +1,19 @@
+{
+  "name": "proyecto",
+  "version": "0.0.0",
+  "description": "proyecto middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/mamoreira/middleware.git",
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "socket.io": "~1.4.6",
+    "express": "~4.14.0",
+    "mysql": "~2.11.1",
+    "body-parser": "~1.15.2",
+    "md5": "~2.1.0"
+  }
+}
